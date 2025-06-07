@@ -38,4 +38,9 @@ public class UserController {
     public ResponseEntity<List<User>> findConnectedUsers(){
         return ResponseEntity.ok(service.findConnectedUsers());
     }
+
+    @GetMapping("/allUsers")
+    public ResponseEntity<List<User>> allTheUsers(){
+        return ResponseEntity.ok(service.findAlLUsers());
+    }
 }
