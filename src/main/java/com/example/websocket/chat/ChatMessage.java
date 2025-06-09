@@ -1,5 +1,6 @@
 package com.example.websocket.chat;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -19,5 +20,6 @@ public class ChatMessage {
     private String senderId;
     private String recipientId;
     private String content;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Date timeStamp;
 }
