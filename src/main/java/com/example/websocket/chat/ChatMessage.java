@@ -19,7 +19,9 @@ public class ChatMessage {
     private String chatId;
     private String senderId;
     private String recipientId;
-    private String content;
+    private String text;
+    private String mediaUri;
+    private String mediaMimeType;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Date timeStamp;
 }

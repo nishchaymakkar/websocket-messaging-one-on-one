@@ -29,9 +29,11 @@ public class ChatController {
                         .id(savedMsg.getId())
                         .senderId(savedMsg.getSenderId())
                         .recipientId(savedMsg.getRecipientId())
-                        .content(savedMsg.getContent())
+                        .content(savedMsg.getText())
                         .build()
         );
+
+
     }
 
     @GetMapping("/messages/{senderId}/{recipientId}")
